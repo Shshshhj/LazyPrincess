@@ -81,8 +81,4 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         logging.info('-----------------------😜 Service Stopped Sweetheart 😝-----------------------')
 
-if name == 'main': 
-    port = int(os.environ.get('PORT', 5000))
-    app = Bot()
-    app.run(host='0.0.0.0', port=port)
 
