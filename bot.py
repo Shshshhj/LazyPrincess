@@ -73,9 +73,10 @@ async def Lazy_start():
     logging.info(LOG_STR)
     await idle()
 
-if __name__ == '__main__':
-    try:
-        loop.run_until_complete(Lazy_start())
-        logging.info('-----------------------🧐 Service running in Lazy Mode 😴-----------------------')
-    except KeyboardInterrupt:
-        logging.info('-----------------------😜 Service Stopped Sweetheart 😝-----------------------')
+
+if name == 'main': 
+    port = int(os.environ.get('PORT', 5000))
+    app = Bot()
+    app.run(host='0.0.0.0', port=port)
+
+___
